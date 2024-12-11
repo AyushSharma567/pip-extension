@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube PiP Controller",
+  "version": "1.0",
+  "description": "Enables Picture-in-Picture mode and video controls for YouTube videos.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
